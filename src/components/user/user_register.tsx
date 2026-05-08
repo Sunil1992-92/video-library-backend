@@ -16,7 +16,8 @@ export function  User_Register(){
             email:''
         },
         onSubmit:(user:any)=>{
-            axios.post(`http://127.0.0.1:4041/register_user`,user)
+           // axios.post(`http://127.0.0.1:4041/register_user`,user)
+           axios.post("https://video-library-backend-cjyn.onrender.com/register_user",user)
             .then(()=>{
                 console.log('User Register');
                 
