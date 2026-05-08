@@ -12,7 +12,8 @@ export function Admin_Login(){
             password:''
         },
         onSubmit(admin){
-            axios.get(`http://127.0.0.1:4041/admin`)
+          //  axios.get(`http://127.0.0.1:4041/admin`)
+          axios.get("https://video-library-backend-cjyn.onrender.com/admin")
             .then(responce=>{
                  var record= responce.data.find((item:any)=>item.admin_id===admin.admin_id)
                  if(record){

@@ -15,7 +15,8 @@ export function Admin_DashBpard(){
     const[categories,setCotegories]=useState<any[]>([])
 
     function LoadVideos(){
-        axios.get(`http://127.0.0.1:4041/videos`)
+       // axios.get(`http://127.0.0.1:4041/videos`)
+       axios.get("https://video-library-backend-cjyn.onrender.com/videos")
         .then(response=>{
             setVideos(response.data);
             
